@@ -1,5 +1,7 @@
 ﻿# Jogo da Adivinhação 🎲
 
+![](https://imgur.com/wtLbfVr.gif)
+
 Este é um jogo simples de adivinhação desenvolvido em C#. O objetivo do jogo é tentar adivinhar um número secreto gerado aleatoriamente dentro de um intervalo de 1 a 20.
 
 ## 🎮 Como jogar?
@@ -15,8 +17,7 @@ Este é um jogo simples de adivinhação desenvolvido em C#. O objetivo do jogo 
 
 ## 🛠 Tecnologias utilizadas
 
-- Linguagem: **C#**
-- Plataforma: **.NET**
+[![Tecnologias](https://skillicons.dev/icons?i=git,github,cs,dotnet,visualstudio,)](https://skillicons.dev)
 
 ## 🚀 Como executar o jogo?
 
