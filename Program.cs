@@ -4,6 +4,7 @@
     {
         static void Main(string[] args)
         {
+
             Console.WriteLine("----------------------------------");
             Console.WriteLine("Jogo da Adivinhação");
             Console.WriteLine("----------------------------------");
@@ -31,17 +32,32 @@
 
             Random geradorDeNumeros = new Random();
             int numeroSecreto = geradorDeNumeros.Next(1, 21);
+            int[] numerosDigitados = new int[totalTentativas];
+            int contadorHistorico = 0;
 
-            for(int tentativa = 1; tentativa <= totalTentativas; tentativa++)
+            for (int tentativa = 1; tentativa <= totalTentativas; tentativa++)
             {
                 Console.Clear();
-
                 Console.WriteLine("---------------------------------");
                 Console.WriteLine($"Tentativa {tentativa} de {totalTentativas}");
                 Console.WriteLine("---------------------------------");
 
+                if (contadorHistorico > 0)
+                {
+                    Console.WriteLine("Números digitados:");
+                    for (int contador = 0; contador < contadorHistorico; contador++)
+                    {
+                        Console.Write(numerosDigitados[contador] + " ");
+                    }
+                    Console.WriteLine();
+                    Console.WriteLine("---------------------------------");
+
+                }
+
                 Console.Write("Digite um número (de 1 a 20) para chutar: ");
                 int numeroDigitado = Convert.ToInt32(Console.ReadLine());
+                numerosDigitados[contadorHistorico] = numeroDigitado;
+                contadorHistorico++;
 
                 if (numeroDigitado == numeroSecreto)
                 {
