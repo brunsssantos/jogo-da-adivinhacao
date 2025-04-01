@@ -4,20 +4,7 @@
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("Jogo da Adivinhação");
-            Console.WriteLine("----------------------------------");
-
-            Console.WriteLine("Escolha o nível de dificuldade: ");
-            Console.WriteLine("----------------------------------");
-            Console.WriteLine("1 - Fácil (10 tentativas)");
-            Console.WriteLine("2 - Médio (5 tentativas)");
-            Console.WriteLine("3 - Difícil (3 tentativas)");
-            Console.WriteLine("----------------------------------");
-
-            Console.WriteLine("Digite sua escolha: ");
-            string escolhaDificuldade = Console.ReadLine();
+            string escolhaDificuldade = ExibirMenu();
 
             int totalTentativas = 0;
 
@@ -88,9 +75,26 @@
             Console.ReadLine();
 
 
-
-
-
         }
+        static string ExibirMenu()
+        {
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("Jogo da Adivinhação");
+            Console.WriteLine("----------------------------------");
+
+            Console.WriteLine("Escolha o nível de dificuldade: ");
+            Console.WriteLine("----------------------------------");
+            Console.WriteLine("1 - Fácil (10 tentativas)");
+            Console.WriteLine("2 - Médio (5 tentativas)");
+            Console.WriteLine("3 - Difícil (3 tentativas)");
+            Console.WriteLine("----------------------------------");
+
+            Console.WriteLine("Digite sua escolha: ");
+
+            string EscolhaDificuldade = Console.ReadLine();
+
+            return EscolhaDificuldade;
+        }
+
     }
 }
